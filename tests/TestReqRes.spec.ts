@@ -8,11 +8,11 @@ let data = page.getByRole('heading', { name: 'Fake data' });
 
 test('check Real responses', async ({ page }) =>{
     await page.goto("https://reqres.in/");
-    let responses = page.getByRole('heading', { name: 'Real responses' })
+    let responses = page.getByRole('heading', { name: 'Real responses' });
     await expect(responses).toBeVisible();
 })
 
-test('check Always-', async ({page}) => {
+test('check Always-on', async ({page}) => {
     await page.goto("https://reqres.in/");
     let always = page.getByRole('heading', { name: 'Always-on' });
     await expect(always).toBeVisible();
