@@ -1,21 +1,21 @@
 import {test, expect} from "playwright/test";
 
-test("navigate Swagger petstore", async ({ page }) => {
+test("navigate Swagger petstore, check petId", async ({ page }) => {
 await page.goto("https://petstore.swagger.io/");
 let petId = page.getByRole('button', { name: 'POST /pet/{petId}/uploadImage uploads an image' });
     await expect(petId).toBeVisible();
 })
 
-test('check postpet', async ({ page }) =>{
+test('check Authorize', async ({ page }) =>{
     await page.goto("https://petstore.swagger.io/");
-    let postpet = page.getByRole('button', { name: 'Authorize' });
-    await expect(postpet).toBeVisible();
+    let authorize = page.getByRole('button', { name: 'Authorize' });
+    await expect(authorize).toBeVisible();
 })
 
-test('check find', async ({page}) => {
+test('check POST Create user', async ({page}) => {
     await page.goto("https://petstore.swagger.io/");
-    let find = page.getByRole('button', { name: 'POST /user Create user' });
-    await expect(find).toBeVisible();
+    let post = page.getByRole('button', { name: 'POST /user Create user' });
+    await expect(post).toBeVisible();
 })
 
 test('check logo', async ({page}) => {
@@ -31,7 +31,7 @@ test('POST request example', async () => {
         id: 0,
         username: "Bodya",
         firstName: "Banan",
-        lastName: "Badanich",
+        lastName: "Bob",
         email: "qatesterclub@gmail.com",
         password: "12345678",
         phone: "77777777",
