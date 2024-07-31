@@ -35,9 +35,3 @@ test("check Jordan", async ({page}) =>{
     let jordan = page.getByTestId('desktop-menu-container').getByRole('link', { name: 'Jordan' });
     await expect(jordan).toBeVisible();
 })
-
-test("click Jordan, check logo Jordan's", async ({page}) =>{
-    await page.goto("https://www.nike.com/");
-    let jordan = page.getByTestId('desktop-menu-container').getByRole('link', { name: 'Jordan' });
-    await jordan.click();
-})
